@@ -1,0 +1,209 @@
+\documentclass{ctexart}
+
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{ulem}
+\usepackage{titlesec}
+\usepackage{titletoc}
+
+
+% 黑龙江大学研究生毕业论文要求
+% A4纸
+% 上边距 4.0cm
+% 下边距 3.5cm
+% 内侧 3cm
+% 外侧 3cm
+% 版心大小 150mm x 215mm (加页眉页码 150mm x 235mm)
+\usepackage[a4paper,total={150mm,235mm},top=4cm,inner=3cm,outer=3cm,bottom=3.5cm,includeheadfoot,twoside]{geometry}
+
+% 页眉 3cm
+% 页脚 2.75厘米
+
+\newdimen\doublelineskip % 两横线间的距离
+\setlength\doublelineskip{.3mm}
+\newdimen\headrulewidthA % 第一条线的宽度
+\setlength\headrulewidthA{.2mm}
+\newdimen\headrulewidthB % 第二条线的宽度
+\setlength\headrulewidthB{.8mm}
+
+\setlength\headheight{21pt}
+
+\fancypagestyle{headings}{
+  \renewcommand\headrulewidth{0.4pt}
+}
+\fancypagestyle{doubleline}[headings]{
+  \renewcommand\headrule{%
+    \hrule height\headrulewidthA width\headwidth%
+    \vskip \doublelineskip%
+    \hrule height\headrulewidthB width\headwidth}
+    }
+    
+%\pagestyle{headings}
+\pagestyle{doubleline}
+
+
+
+% \pagestyle{fancy}
+%页眉上字号用5号黑体。页下注字号用小5号宋体.
+\fancyhead{}
+\fancyhead[CO]{\zihao{5}\heiti\leftmark}
+\fancyhead[CE]{\zihao{5}\heiti 黑龙江大学硕士学位论文}
+ 
+
+% 学位论文的字号正文用小4号宋体，1.5倍行距。
+
+% 各章题序及标题用小2号黑体，
+% 各节的一级题序及标题用小3号黑体，
+% 各节的二级题序及标题用4号黑体，
+% 各节的三级题序及标题用小4号黑体，款项均采用小4号黑体，其余用小4号宋体。
+% 正文章节题目（要求编到第3级标题，即×.×.×。一级标题顶格书写，二级标题缩进一格，三级标题缩进两格。）
+\ctexset{
+  section={
+    name={第\ ,\ 章},
+    format += \zihao{-2}\heiti
+  },
+  subsection={
+    format += \zihao{-3}\heiti,
+    indent = 1\ccwd
+  },
+  subsubsection={
+    format += \zihao{4}\heiti,
+    indent = 2\ccwd
+  }
+}
+
+% \titlecontents{标题名}
+% [左间距]
+% {标题格式}
+% {标题标志}
+% {无序号标题}
+% {指引线与页码}
+% [下间距]
+
+\titlecontents{section}
+              [3.8em]
+              {\heiti \zihao{-4} \bf}
+              {\contentslabel{3.5em}}
+              {\hspace*{-3.5em}}
+              {\titlerule*[0.3pc]{.}\contentspage}
+\titlecontents{subsection}
+              [4em]
+              {\songti \zihao{-4} }
+              {\contentslabel{1.8em}}
+              {\hspace*{-1.8em}}
+              {\titlerule*[0.3pc]{.}\contentspage}
+\titlecontents{subsubsection}
+              [6.5em]
+              {\songti \zihao{-4} }
+              {\contentslabel{2.5em}}
+              {\hspace*{-2.5em}}
+              {\titlerule*[0.3pc]{.}\contentspage}
+
+\begin{document}
+
+
+\songti
+\zihao{-4}
+
+\begin{titlepage}
+  \hbox{ \hsize 100mm
+    \vbox{\includegraphics[width=37.2mm,height=34.8mm]{img/hlju_logo.jpg}}
+    \raise 8mm
+    \vbox{
+      \heiti
+      \zihao{-4}
+      \bfseries 
+      \makebox[3em][s]{分类号} \hspace{1ex} \dotuline{\makebox[4em][s]{}}
+
+      \makebox[3em][s]{U D C} \hspace{1ex} \dotuline{\makebox[4em][s]{}}
+
+      \makebox[3em][s]{密级} \hspace{1ex} \dotuline{\makebox[4em][c]{\makebox[3em][s]{公开}}}
+
+    }
+  }
+
+\vspace{8mm}
+
+\begin{center}
+  \includegraphics[width=27.3\ccwd,height=6.\ccwd]{img/school_name.png}
+
+  \vspace{8mm}
+
+  {\songti \zihao{2} 硕士研究生学位论文}
+
+  \vspace{8mm}
+
+  {\heiti \zihao{2} \bfseries 基于深度学习的药物重定位方法研究}
+
+  \vspace{30mm}
+
+  {
+    \songti \zihao{-3} \bfseries
+    \begin{tabular}{ll}
+      \makebox[4em][s]{申请人:}& 张洪达\\
+      \makebox[4em][s]{学号:}&  2191437\\
+      \makebox[4em][s]{培养单位:}& 黑龙江大学\\
+      \makebox[4em][s]{学科专业:}& 计算机科学与技术\\
+      \makebox[4em][s]{研究方向:}& 生物信息学\\
+      \makebox[4em][s]{指导教师:}& 玄萍\\
+      \makebox[4em][s]{完成日期:}& 2022年4月15日\\
+    \end{tabular}
+    
+  }
+\end{center}
+  
+\end{titlepage}
+
+\pagenumbering{Roman}
+\include{abs_zh.tex}
+\include{abs_en.tex}
+\tableofcontents
+\include{symbols.tex}
+\pagenumbering{arabic}
+% main body
+\include{body.tex}
+\include{conclusion.tex}
+\include{references.tex}
+\include{appendix.tex}
+\include{thanks.tex}
+\include{achievement.tex}
+
+
+\section*{独创性声明}
+\addcontentsline{toc}{section}{独创性声明}
+
+本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果.
+据我所知, 除了文中特别加以标注和致谢的地方外,
+论文中不包含其他人已经发表或撰写过的研究成果,
+也不包含为获得\underline{\makebox[6\ccwd][c]{黑龙江大学}}或其他教育机构的
+学位或证书而使用过的材料。
+
+\vspace{1cm} \noindent 学位论文作者签名: \hspace{11\ccwd}
+签字日期:\hspace{2\ccwd}年\hspace{1\ccwd}月\hspace{1\ccwd}日
+\vspace{1cm}
+
+\section*{学位论文版权使用授权书}
+本人完全了解\underline{\makebox[6\ccwd][c]{黑龙江大学}}有关保留、使用学位论文的规定，
+同意学校保留并向国家有关部门或机构送交论文的复印件和电子版，允许论文被查阅和借阅。
+本人授权\underline{\makebox[6\ccwd][c]{黑龙江大学}}
+可以将学位论文的全部或部分内容编入有关数据库进行检索，
+可以采用影印、缩印或其他复制手段保存、汇编本学位论文。
+
+\vspace{1cm}
+\noindent 学位论文作者签名： \hspace{11\ccwd} 导师签名：
+
+\noindent 签字日期：\hspace{2\ccwd}年\hspace{1\ccwd}月\hspace{1\ccwd}日
+\hspace{8\ccwd}
+签字日期：\hspace{2\ccwd}年\hspace{1\ccwd}月\hspace{1\ccwd}日
+
+\vspace{1cm}
+\noindent 学位论文作者毕业后去向：
+
+\noindent 工作单位：\hspace{15.5\ccwd} 电话：
+
+\noindent 通讯地址：\hspace{15.5\ccwd} 邮编：
+
+
+\end{document}
