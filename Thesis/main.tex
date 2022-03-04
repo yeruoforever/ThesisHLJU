@@ -7,8 +7,7 @@
 \usepackage{ulem}
 \usepackage{titlesec}
 \usepackage{titletoc}
-
-
+\usepackage{gbt7714}
 % 黑龙江大学研究生毕业论文要求
 % A4纸
 % 上边距 4.0cm
@@ -101,6 +100,11 @@
               {\hspace*{-2.5em}}
               {\titlerule*[0.3pc]{.}\contentspage}
 
+
+
+\bibliographystyle{gbt7714-numerical}
+
+
 \begin{document}
 
 
@@ -165,7 +169,9 @@
 % main body
 \include{body.tex}
 \include{conclusion.tex}
-\include{references.tex}
+% \include{references.tex}
+\bibliography{references.bib}
+\addcontentsline{toc}{section}{参考文献}
 \include{appendix.tex}
 \include{thanks.tex}
 \include{achievement.tex}
@@ -180,7 +186,7 @@
 也不包含为获得\underline{\makebox[6\ccwd][c]{黑龙江大学}}或其他教育机构的
 学位或证书而使用过的材料。
 
-\vspace{1cm} \noindent 学位论文作者签名: \hspace{11\ccwd}
+\vspace{1cm} \noindent 学位论文作者签名： \hspace{11\ccwd}
 签字日期:\hspace{2\ccwd}年\hspace{1\ccwd}月\hspace{1\ccwd}日
 \vspace{1cm}
 
@@ -195,15 +201,15 @@
 \noindent 学位论文作者签名： \hspace{11\ccwd} 导师签名：
 
 \noindent 签字日期：\hspace{2\ccwd}年\hspace{1\ccwd}月\hspace{1\ccwd}日
-\hspace{8\ccwd}
+\hspace{7.7\ccwd}
 签字日期：\hspace{2\ccwd}年\hspace{1\ccwd}月\hspace{1\ccwd}日
 
 \vspace{1cm}
 \noindent 学位论文作者毕业后去向：
 
-\noindent 工作单位：\hspace{15.5\ccwd} 电话：
+\noindent 工作单位：\hspace{15.3\ccwd} 电话：
 
-\noindent 通讯地址：\hspace{15.5\ccwd} 邮编：
+\noindent 通讯地址：\hspace{15.3\ccwd} 邮编：
 
 
 \end{document}
