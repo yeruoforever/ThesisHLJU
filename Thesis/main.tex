@@ -8,6 +8,10 @@
 \usepackage{titlesec}
 \usepackage{titletoc}
 \usepackage{gbt7714}
+\usepackage{caption}
+\usepackage{bicaption}
+\usepackage{subcaption}
+
 % 黑龙江大学研究生毕业论文要求
 % A4纸
 % 上边距 4.0cm
@@ -103,6 +107,27 @@
 
 
 \bibliographystyle{gbt7714-numerical}
+
+
+% 每个图均应有图题（由图号和图名组成）。图号按章编排，
+% 如第1章第一个插图的图号为“图1-1”等。图题置于图下，用中、英文两种文字居中书写，
+% 中文在上，要求用5号字。有图注或其它说明时应置于图题之上。
+% 图名在图号之后空一格排写。引用图应注明出处，在图题右上角加引用文献号。
+% 图中若有分图时，分图题置于分图之下，分图号用a)、b)等表示。
+
+\captionsetup[figure]{labelsep=space}
+\captionsetup[figure][bi-second]{name=Figure}
+\captionsetup[table]{labelsep=space}
+\captionsetup[table][bi-second]{name=Table}
+\captionsetup[subfigure]{labelformat=simple}
+
+\renewcommand{\thefigure}{\thesection-\arabic{figure}}
+\renewcommand{\thetable}{\thesection-\arabic{table}}
+\renewcommand{\thesubfigure}{\alph{subfigure})}
+
+
+\renewcommand{\captionfont}{\zihao{5}}
+
 
 
 \begin{document}
