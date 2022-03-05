@@ -13,7 +13,15 @@
 \usepackage{subcaption}
 \usepackage{amsmath}
 \usepackage{booktabs}
+\usepackage[a4paper,total={150mm,235mm},top=4cm,inner=3cm,outer=3cm,bottom=3.5cm,includeheadfoot,twoside]{geometry}
 
+\newcommand{\lwtm}{论文题目}
+\newcommand{\shenqingren}{申请人姓名}
+\newcommand{\xuehao}{学号}
+\newcommand{\xkzy}{学科专业名}
+\newcommand{\yjfx}{研究方向名称}
+\newcommand{\zdjs}{指导教师}
+\newcommand{\wcrq}{\today}
 
 % 黑龙江大学研究生毕业论文要求
 % A4纸
@@ -22,7 +30,6 @@
 % 内侧 3cm
 % 外侧 3cm
 % 版心大小 150mm x 215mm (加页眉页码 150mm x 235mm)
-\usepackage[a4paper,total={150mm,235mm},top=4cm,inner=3cm,outer=3cm,bottom=3.5cm,includeheadfoot,twoside]{geometry}
 
 % 页眉 3cm
 % 页脚 2.75厘米
@@ -59,6 +66,9 @@
  
 
 % 学位论文的字号正文用小4号宋体，1.5倍行距。
+\songti
+\zihao{-4}
+\onehalfspacing
 
 % 各章题序及标题用小2号黑体，
 % 各节的一级题序及标题用小3号黑体，
@@ -143,13 +153,12 @@
 \newcommand{\biaoge}[1]{表\ref{#1}}
 
 
+
+
 \begin{document}
 
-
-\songti
-\zihao{-4}
-
 \begin{titlepage}
+  \onehalfspacing
   \hbox{ \hsize 100mm
     \vbox{\includegraphics[width=37.2mm,height=34.8mm]{img/hlju_logo.jpg}}
     \raise 8mm
@@ -177,20 +186,20 @@
 
   \vspace{8mm}
 
-  {\heiti \zihao{2} \bfseries 基于深度学习的药物重定位方法研究}
+  {\heiti \zihao{2} \bfseries \lwtm}
 
   \vspace{30mm}
 
   {
     \songti \zihao{-3} \bfseries
     \begin{tabular}{ll}
-      \makebox[4em][s]{申请人:}& 张洪达\\
-      \makebox[4em][s]{学号:}&  2191437\\
+      \makebox[4em][s]{申请人:}& \shenqingren\\
+      \makebox[4em][s]{学号:}&  \xuehao\\
       \makebox[4em][s]{培养单位:}& 黑龙江大学\\
-      \makebox[4em][s]{学科专业:}& 计算机科学与技术\\
-      \makebox[4em][s]{研究方向:}& 生物信息学\\
-      \makebox[4em][s]{指导教师:}& 玄萍\\
-      \makebox[4em][s]{完成日期:}& 2022年4月15日\\
+      \makebox[4em][s]{学科专业:}& \xkzy\\
+      \makebox[4em][s]{研究方向:}& \yjfx\\
+      \makebox[4em][s]{指导教师:}& \zdjs\\
+      \makebox[4em][s]{完成日期:}& \wcrq\\
     \end{tabular}
     
   }
@@ -207,7 +216,6 @@
 % main body
 \include{body.tex}
 \include{conclusion.tex}
-% \include{references.tex}
 \bibliography{references.bib}
 \addcontentsline{toc}{section}{参考文献}
 \include{appendix.tex}
