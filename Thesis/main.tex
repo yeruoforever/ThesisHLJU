@@ -11,6 +11,9 @@
 \usepackage{caption}
 \usepackage{bicaption}
 \usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
 
 % 黑龙江大学研究生毕业论文要求
 % A4纸
@@ -128,6 +131,16 @@
 
 \renewcommand{\captionfont}{\zihao{5}}
 
+% 公式
+% 公式原则上应居中书写。若公式前有文字（如“解”、“假定”等），文字空两格写，公式仍居中写。公式末不加标点。
+% 公式序号按章编排，如第1章第一个公式序号为“(1-1)”，附录2中的第一个公式为(2-1)等。
+% 文中引用公式时，一般用“见式(1-1)”或“由公式(1-1)”。
+
+\numberwithin{equation}{section}
+\renewcommand{\theequation}{\arabic{section}-\arabic{equation}}
+\newcommand{\gongshi}[1]{公式\eqref{#1}}
+\newcommand{\tupian}[1]{图\ref{#1}}
+\newcommand{\biaoge}[1]{表\ref{#1}}
 
 
 \begin{document}

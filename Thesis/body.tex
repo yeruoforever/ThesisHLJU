@@ -1,16 +1,16 @@
 \section{绪论}
 \subsection{研究目的及意义}
 
-
-这是我的第一篇论文\cite{xuan_dynamic_2022}
-
-这是我的第二篇论文\cite{10.1093/bib/bbac009}
-
 \pagebreak
 
 \section{课题研究理论基础}
 \subsection{生物信息学相关知识}
 \subsubsection{LncRNA特点}
+
+这是我的第一篇论文\cite{xuan_dynamic_2022}
+
+这是我的第二篇论文\cite{10.1093/bib/bbac009}
+
 
 \begin{figure}[h]
     \centering
@@ -23,15 +23,33 @@
     \subcaptionbox{这是子图4 \label{Fig:1d}}[.4\textwidth]
         {\includegraphics[width=40mm]{img/hlju_logo.jpg}}
     \bicaption{中文图标标题}{Name of figures}
+    \label{Fig:1}
 \end{figure}
 
 \begin{table}[h]
-    \label{Tab:1}
     \bicaption{表格标题}{Name of table}
+    \label{Tab:1}
     \centering
-    \begin{tabular}{|c|c|}
-        A & B \\
-        \hline
-        C & D \\
+    \begin{tabular}{cccccc}
+        \toprule
+        A & B &A & B &A & B\\
+        \midrule
+        C & D & C & D & C & D\\
+        C & D & C & D & C & D\\
+        C & D & C & D & C & D\\
+        C & D & C & D & C & D\\
+        \bottomrule
     \end{tabular}
 \end{table}
+
+
+\begin{equation}
+    sigmoid(x)=\frac{1}{1+e^{-x}}
+    \label{Eq:1}
+\end{equation}
+
+这里是正文中对图表的引用，如\tupian{Fig:1}所示。
+
+这里是正文中对表格的引用，如\biaoge{Tab:1}所示。
+
+这里是正文中对公式的引用，如\gongshi{Eq:1}所示。
