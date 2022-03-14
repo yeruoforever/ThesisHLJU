@@ -8,16 +8,16 @@
 根据论文内容，本模板将$\LaTeX$模板拆分为多个部分。各部分内容如下边所示，撰写论文时只需将内容添加到相应的文件中。
 |文件名称|文件内容|
 |-------|--------|
-|main.tex|论文封面、作者及论文信息、模板格式设置及相关内容组织|
-|abs_zh.tex|中文摘要|
-|abs_en.tex|英文摘要|
-|symbols.tex|符号表|
-|body.tex|论文正文部分|
-|conclusion.tex|结论|
-|appendix.tex|附录|
-|thanks.tex|致谢|
-|achievement.tex|个人学术成果及论文|
-|references.bib|引用论文数据库|
+|content/main.tex|论文封面、作者及论文信息、模板格式设置及相关内容组织|
+|content/abs_zh.tex|中文摘要|
+|content/abs_en.tex|英文摘要|
+|content/symbols.tex|符号表|
+|content/body.tex|论文正文部分|
+|content/conclusion.tex|结论|
+|content/appendix.tex|附录|
+|content/thanks.tex|致谢|
+|content/achievement.tex|个人学术成果及论文|
+|content/references.bib|引用论文数据库|
 |img/*|论文插图|
 
 ### 插入论文名字及作者信息
@@ -114,6 +114,7 @@
 
 ## 内容更新
 
+* 论文内容移动到`content`下
 * 封面 ok
 * 目录 ok
 * 字体 ok
