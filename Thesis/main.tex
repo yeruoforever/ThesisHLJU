@@ -72,7 +72,8 @@
 % 学位论文的字号正文用小4号宋体，1.5倍行距。
 \songti
 \zihao{-4}
-\onehalfspacing
+% \onehalfspacing
+\setstretch{1.5}
 
 % 各章题序及标题用小2号黑体，
 % 各节的一级题序及标题用小3号黑体，
@@ -223,11 +224,13 @@
 \bibliography{content/references.bib}
 \addcontentsline{toc}{section}{参考文献}
 \include{content/appendix.tex}
+\renewcommand{\leftmark}{致谢}
 \include{content/thanks.tex}
+\renewcommand{\leftmark}{攻读学位期间发表的学术论文}
 \include{content/achievement.tex}
 
-
 \section*{独创性声明}
+\renewcommand{\leftmark}{独创性声明}
 \addcontentsline{toc}{section}{独创性声明}
 
 本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果.
