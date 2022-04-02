@@ -17,14 +17,22 @@
 \usepackage{multirow}
 \usepackage{makecell}
 \usepackage{bm}
-\usepackage[a4paper,total={150mm,235mm},top=4cm,inner=3cm,outer=3cm,bottom=3.5cm,includeheadfoot,twoside]{geometry}
+\usepackage[a4paper,total={150mm,215mm},top=40mm,inner=3cm,outer=3cm,bottom=35mm,twoside,headsep=5mm,footskip=4.5mm]{geometry}
 
 \newcommand{\lwtm}{论文题目}
+% 申请人
 \newcommand{\shenqingren}{申请人姓名}
+% 学号
 \newcommand{\xuehao}{学号}
+% 培养单位
+\newcommand{\pydw}{培养名}
+% 学科专业名
 \newcommand{\xkzy}{学科专业名}
+% 研究方向名称
 \newcommand{\yjfx}{研究方向名称}
+% 指导教师
 \newcommand{\zdjs}{指导教师}
+% 完成日期
 \newcommand{\wcrq}{\today}
 
 % 黑龙江大学研究生毕业论文要求
@@ -43,9 +51,8 @@
 \newdimen\headrulewidthA % 第一条线的宽度
 \setlength\headrulewidthA{.2mm}
 \newdimen\headrulewidthB % 第二条线的宽度
-\setlength\headrulewidthB{.8mm}
+\setlength\headrulewidthB{0.8mm}
 
-\setlength\headheight{21pt}
 
 \fancypagestyle{headings}{
   \renewcommand\headrulewidth{0.4pt}
@@ -63,13 +70,16 @@
 
 
 % \pagestyle{fancy}
-%页眉上字号用5号黑体。页下注字号用小5号宋体.
+%页眉上字号用5号黑体。
 \fancyhead{}
 \fancyhead[CO]{\zihao{5}\heiti\leftmark}
 \fancyhead[CE]{\zihao{5}\heiti 黑龙江大学硕士学位论文}
- 
+
+% 页下注字号用小5号宋体.
+\fancyfoot[CO,CE]{\zihao{-5}\songti\thepage}
 
 % 学位论文的字号正文用小4号宋体，1.5倍行距。
+\setmainfont{Times New Roman}
 \songti
 \zihao{-4}
 % \onehalfspacing
@@ -79,21 +89,21 @@
 % 各节的一级题序及标题用小3号黑体，
 % 各节的二级题序及标题用4号黑体，
 % 各节的三级题序及标题用小4号黑体，款项均采用小4号黑体，其余用小4号宋体。
-% 正文章节题目（要求编到第3级标题，即×.×.×。一级标题顶格书写，二级标题缩进一格，三级标题缩进两格。）
 \ctexset{
   section={
-    name={第\ ,\ 章},
+    name={第,章},
     format += \zihao{-2}\heiti\mdseries
   },
   subsection={
     format += \zihao{-3}\heiti\mdseries,
-    indent = 1\ccwd
+    indent = 0\ccwd
   },
   subsubsection={
     format += \zihao{4}\heiti\mdseries,
-    indent = 2\ccwd
+    indent = 0\ccwd
   }
 }
+
 
 % \titlecontents{标题名}
 % [左间距]
@@ -103,9 +113,10 @@
 % {指引线与页码}
 % [下间距]
 
+% 正文章节题目（要求编到第3级标题，即×.×.×。一级标题顶格书写，二级标题缩进一格，三级标题缩进两格。）
 \titlecontents{section}
               [3.8em]
-              {\heiti \zihao{-4} \bf}
+              {\heiti \zihao{-4} \bfseries}
               {\contentslabel{3.5em}}
               {\hspace*{-3.5em}}
               {\titlerule*[0.3pc]{.}\contentspage}
@@ -200,7 +211,7 @@
     \begin{tabular}{ll}
       \makebox[4em][s]{申请人:}& \shenqingren\\
       \makebox[4em][s]{学号:}&  \xuehao\\
-      \makebox[4em][s]{培养单位:}& 黑龙江大学\\
+      \makebox[4em][s]{培养单位:}& \pydw\\
       \makebox[4em][s]{学科专业:}& \xkzy\\
       \makebox[4em][s]{研究方向:}& \yjfx\\
       \makebox[4em][s]{指导教师:}& \zdjs\\
