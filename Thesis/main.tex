@@ -1,6 +1,6 @@
 \documentclass[12pt]{ctexart}
 
-\usepackage[UTF8]{ctex}
+% \usepackage[UTF8]{ctex}
 \usepackage{graphicx}
 \usepackage{setspace}
 \usepackage{fancyhdr}
@@ -44,7 +44,7 @@
 % 版心大小 150mm x 215mm (加页眉页码 150mm x 235mm)
 
 % 页眉 3cm
-% 页脚 2.75厘米
+% 页脚 2.75cm
 
 \newdimen\doublelineskip % 两横线间的距离
 \setlength\doublelineskip{.3mm}
@@ -78,13 +78,12 @@
 % 页下注字号用小5号宋体.
 \fancyfoot[CO,CE]{\zihao{-5}\songti\thepage}
 
-% 学位论文的字号正文用小4号宋体，1.5倍行距。
+% 学位论文的字号正文用小4号宋体，英文为Times New Roman
 \setmainfont{Times New Roman}
-\songti
-\zihao{-4}
+% 1.5倍行距。
 % \onehalfspacing
 \setstretch{1.614}
-
+% \punctstyle{banjiao}
 % 各章题序及标题用小2号黑体，
 % 各节的一级题序及标题用小3号黑体，
 % 各节的二级题序及标题用4号黑体，
@@ -104,6 +103,7 @@
   }
 }
 
+\newcommand{\kuanxiang}[1]{{\heiti \zihao{-4} #1}\ }
 
 % \titlecontents{标题名}
 % [左间距]
@@ -116,7 +116,7 @@
 % 正文章节题目（要求编到第3级标题，即×.×.×。一级标题顶格书写，二级标题缩进一格，三级标题缩进两格。）
 \titlecontents{section}
               [3.8em]
-              {\heiti \zihao{-4} \bfseries}
+              {\songti \zihao{-4} \bfseries}
               {\contentslabel{3.5em}}
               {\hspace*{-3.5em}}
               {\titlerule*[0.3pc]{.}\contentspage}
@@ -172,6 +172,10 @@
 
 
 \begin{document}
+
+% 正文小4号宋体
+\songti
+\zihao{-4}
 
 \begin{titlepage}
   \onehalfspacing
