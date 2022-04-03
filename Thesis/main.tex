@@ -7,7 +7,7 @@
 \usepackage{ulem}
 \usepackage{titlesec}
 \usepackage{titletoc}
-\usepackage{gbt7714}
+\usepackage[backend=biber,style=gb7714-2015,gbnamefmt=givenahead,gbmedium=false,gbpunctin=false,gbalign=left]{biblatex}
 \usepackage{caption}
 \usepackage{bicaption}
 \usepackage{subcaption}
@@ -135,7 +135,6 @@
 
 
 
-\bibliographystyle{gbt7714-numerical}
 
 
 % 每个图均应有图题（由图号和图名组成）。图号按章编排，
@@ -169,6 +168,7 @@
 \newcommand{\biaoge}[1]{表\ref{#1}}
 
 
+\addbibresource[location=local]{content/references.bib}
 
 
 \begin{document}
@@ -232,7 +232,7 @@
 % main body
 \include{content/body.tex}
 \include{content/conclusion.tex}
-\bibliography{content/references.bib}
+\printbibliography[heading=bibliography,title=参考文献]
 \addcontentsline{toc}{section}{参考文献}
 \include{content/appendix.tex}
 \renewcommand{\leftmark}{致谢}
