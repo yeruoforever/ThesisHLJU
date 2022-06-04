@@ -18,6 +18,7 @@
 \usepackage{makecell}
 \usepackage{bm}
 \usepackage[a4paper,total={150mm,215mm},top=40mm,inner=3cm,outer=3cm,bottom=35mm,twoside,headsep=5mm,footskip=5.25mm]{geometry}
+\usepackage{longtable}
 
 \newcommand{\lwtm}{论文题目}
 % 申请人
@@ -230,25 +231,33 @@
 \end{titlepage}
 
 \pagenumbering{Roman}
+\fancyhead[CO]{\zihao{5}\heiti 中文摘要}
 \include{content/abs_zh.tex}
+\fancyhead[CO]{\zihao{5}\heiti Abstract}
 \include{content/abs_en.tex}
+\fancyhead[CO]{\zihao{5}\heiti 目录}
 \tableofcontents
 \include{content/symbols.tex}
 \pagenumbering{arabic}
 % main body
+\fancyhead[CO]{\zihao{5}\heiti\leftmark}
 \include{content/body.tex}
+\include{content/appendix.tex}
 \renewcommand{\leftmark}{结论}
 \include{content/conclusion.tex}
-\printbibliography[heading=bibliography,title=参考文献]
+\fancyhead[CO]{\zihao{5}\heiti 参考文献}
+\begin{spacing}{1}
+  \printbibliography[heading=bibliography,title=参考文献]
+\end{spacing}
 \addcontentsline{toc}{section}{参考文献}
 \include{content/appendix.tex}
-\renewcommand{\leftmark}{致谢}
+\fancyhead[CO]{\zihao{5}\heiti 致谢}
 \include{content/thanks.tex}
-\renewcommand{\leftmark}{攻读学位期间发表的学术论文}
+\fancyhead[CO]{\zihao{5}\heiti 攻读学位期间发表的学术论文}
 \include{content/achievement.tex}
 
 \section*{独创性声明}
-\renewcommand{\leftmark}{独创性声明}
+\fancyhead[CO]{\zihao{5}\heiti 独创性声明}
 \addcontentsline{toc}{section}{独创性声明}
 
 本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果.
